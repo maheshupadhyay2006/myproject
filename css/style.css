@@ -1,0 +1,52 @@
+*{margin: 0px; padding: 0px; box-sizing: border-box;}
+.icon{display: grid; grid-template-columns: 60% auto; }
+.licon{ background: lightgrey; font-size: 22px; padding-left: 20px;}
+.licon i{padding: 12px 30px;}
+.ricon{background: lightgrey; font-size: 22px;}
+.ricon span{padding: 0px 30px;}
+.ricon span i{padding: 12px 0px;}
+.header{padding: 40px; background: blue; color: white;}
+.header p{float: right; font-size: 4vw;}
+
+.menu{padding: 12px 0px; background: lightblue; position: sticky; top: 0px;}
+.menu a{text-decoration: none; padding: 12px 30px;}
+.menu a:hover{background: blue; color: white;}
+.slider{padding: 300px; background: url('../image/b1.jpg'); background-size: cover;
+animation: slider 4s; animation-iteration-count: infinite;
+}
+@keyframes slider{
+    0%{background: url('../image/b1.jpg');}
+    25%{background: url('../image/b2.jpg');}
+    50%{background: url('../image/b3.jpg');}
+    75%{background: url('../image/b41.jpg');}
+}
+
+.center{display: grid; grid-template-columns: 24% auto; gap: 10px;}
+.left ul{list-style: none; margin-top: 20px;}
+.left li{width: 100%; border: 1px solid blue; text-align: center; padding: 14px 0px;}
+.left #mycat{background: orange; font-size: 23px;}
+.prow{display: grid; grid-template-columns: auto auto auto auto; gap: 7px; margin-top: 20px;}
+.product{border: 1px solid blue;}
+.product img{height: auto; max-width: 100%;}
+.data{padding: 10px; text-align: justify; line-height: 30px;}
+.footer{padding: 30px; text-align: center; background: black; color: white;}
+
+
+
+@media only screen and (max-width:1200px){
+    .ricon span{padding: 0px 10px;}
+    .center{ grid-template-columns: 34% auto;}
+    .prow{ grid-template-columns: auto auto auto;}
+}
+
+@media only screen and (max-width:992px){
+   .icon{display: none;} 
+   .center{ grid-template-columns: 44% auto;}
+   .prow{ grid-template-columns: auto auto;}
+}
+@media only screen and (max-width:768px){
+    .center{ grid-template-columns:auto;}
+    .prow{ grid-template-columns: auto;}
+    .menu a{display: block; text-align: center; }
+    .menu{position: relative;}
+ }
